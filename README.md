@@ -1,79 +1,32 @@
 # TurboTune
 
-LLM fine-tuning platform with LoRA/QLoRA training, dataset management, loss visualization, and model merging tools.
+Next.js scaffold for an LLM fine-tuning platform concept. Work in progress.
 
-## Features
+## What's Here
 
-- **Training Dashboard** -- Launch and monitor LoRA/QLoRA fine-tuning runs
-- **Hyperparameter Config** -- Configure rank, alpha, dropout, learning rate, and more
-- **Dataset Builder** -- Create and edit instruction-tuning datasets inline
-- **Loss Visualization** -- Real-time training and validation loss curves
-- **Model Merging** -- Merge fine-tuned adapters with base models
-- **Multi-Model Support** -- Fine-tune Llama, Mistral, and other open models
-- **Run Management** -- Track queued, running, completed, and failed jobs
+This is a bare Next.js starter with Supabase wiring. The repo contains:
+
+- A single root page (page.tsx), layout, and global styles
+- Supabase client configuration (lib/supabase)
+- Project configuration files (tsconfig, tailwind, postcss, next.config)
+
+No UI components, dashboard pages, or fine-tuning functionality have been implemented yet.
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Charts:** Recharts
-- **State Management:** Zustand
-- **Database:** Supabase (with SSR support)
-- **Icons:** Lucide React
+- Next.js 14 (App Router), TypeScript, Tailwind CSS
+- Supabase (with SSR support)
+- Zustand, Recharts, Lucide React (listed in package.json but not yet used in code)
 
-## Getting Started
+## Status
 
-### Prerequisites
+Early-stage scaffold generated with AI assistance. No fine-tuning features, training dashboards, or dataset tools are implemented. The project structure is minimal - just the default Next.js app entry point and Supabase client setup.
 
-- Node.js 18+
-- npm or yarn
-
-### Installation
+## Setup
 
 ```bash
-git clone <repository-url>
-cd turbotune
 npm install
-```
-
-### Environment Variables
-
-Create a `.env.local` file:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### Development
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build
-
-```bash
-npm run build
-npm start
-```
-
-## Project Structure
-
-```
-turbotune/
-├── src/
-│   ├── app/              # Next.js App Router pages
-│   ├── components/       # React components
-│   └── lib/              # Utilities, store, mock data
-├── public/               # Static assets
-├── tailwind.config.ts
-└── package.json
-```
-
-## License
-
-MIT
+Requires Supabase credentials in .env.local. See .env.local for required variables.
